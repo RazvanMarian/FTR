@@ -1,9 +1,7 @@
 package com.unibuc.FTR.controller;
 
-import com.unibuc.FTR.dto.PlayerDto;
 import com.unibuc.FTR.dto.PlayerStatisticsDto;
 import com.unibuc.FTR.service.abstractions.PlayerStatisticsService;
-import com.unibuc.FTR.validator.SeasonFormat;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,7 +31,7 @@ public class PlayerStatisticsController {
 
     @GetMapping("/playerStatisticsBySeason")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<PlayerStatisticsDto> EditPlayerStatistics(@RequestParam Integer playerId,
+    public ResponseEntity<PlayerStatisticsDto> GetPlayerStatisticsBySeason(@RequestParam Integer playerId,
                                                                     @RequestParam String season)
     {
         return ResponseEntity.status(HttpStatus.OK).body(playerStatisticsService.getPlayerStatistics(playerId, season));

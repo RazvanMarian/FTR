@@ -53,14 +53,14 @@ public class PlayerServiceImplementation implements PlayerService {
     }
 
     @Override
-    public void deletePlayerFromRoster(Integer playerId) {
+    public PlayerDto deletePlayerFromRoster(Integer playerId) {
         var player = playerRepository.findById(playerId);
         if(player.isEmpty())
             throw new DataNotFoundException();
 
         Player entity = player.get();
         entity.setTeamRoster(null);
-        playerRepository.save(entity);
+        return PlayerMapper.convertToDto(playerRepository.save(entity));
     }
 
     @Override

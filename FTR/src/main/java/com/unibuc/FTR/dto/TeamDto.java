@@ -1,7 +1,6 @@
 package com.unibuc.FTR.dto;
 
 import com.unibuc.FTR.constants.Constants;
-import com.unibuc.FTR.validator.OnlyLetters;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

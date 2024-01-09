@@ -15,7 +15,7 @@ public class PlayerMapper {
                 .firstName(player.getFirstName())
                 .lastName(player.getLastName())
                 .birthDay(dateFormat.format(player.getBirthDay()))
-                .rosterId(player.getTeamRoster().getId())
+                .rosterId(player.getTeamRoster() == null ? null : player.getTeamRoster().getId())
                 .position(player.getPosition())
                 .id(player.getId())
                 .build();

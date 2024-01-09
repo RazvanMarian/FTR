@@ -48,8 +48,6 @@ public class TeamServiceGetTeamByNameTest {
     @DisplayName("Get team by name - unhappy path")
     public void GetTeamByNameFails()
     {
-        Team team = new Team(1,"TestTeam","TestCoach", "TestDescription", null, null, null);
-
         when(teamRepository.findByName(anyString())).thenThrow(new DataNotFoundException());
 
         assertThatThrownBy(() -> teamService.getTeamByName("SomeTeam"))

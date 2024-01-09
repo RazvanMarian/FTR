@@ -59,6 +59,25 @@ public class PlayerStatisticsSaveTest {
     }
 
     @Test
+    @DisplayName("Save player statistics - happy path")
+    public void edit()
+    {
+        PlayerStatisticsDto playerStatisticsDtoTest = new PlayerStatisticsDto(1, 1, 10, 5, "2023/2024");
+        PlayerStatistics playerStatisticsToSave = PlayerStatisticsMapper.convertToPlayerStatistics(playerStatisticsDtoTest);
+        Player player = new Player(1, "test", "test",new Date(),"defender", null, new HashSet<>());
+        playerStatisticsToSave.setPlayer(player);
+
+        when(playerStatisticsRepository.findById(any(Integer.class)))
+                .thenReturn(Optional.of(new PlayerStatistics(1,6, 8, "2023/2024", player)));
+        when(playerStatisticsRepository.save(ArgumentMatchers.any(PlayerStatistics.class))).thenReturn(playerStatisticsToSave);
+
+        PlayerStatisticsDto resultDto = playerStatisticsService.save(playerStatisticsDtoTest);
+
+        verify(playerStatisticsRepository).save(playerStatisticsToSave);
+        assertThat(resultDto).isEqualTo(playerStatisticsDtoTest);
+    }
+
+    @Test
     @DisplayName("Save player statistics - unhappy path player doesn't exist")
     public void createFails()
     {
