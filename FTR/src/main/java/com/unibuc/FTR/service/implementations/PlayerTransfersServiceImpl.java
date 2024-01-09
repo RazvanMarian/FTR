@@ -1,19 +1,13 @@
 package com.unibuc.FTR.service.implementations;
 
 import com.unibuc.FTR.dto.PlayerTransferDto;
-import com.unibuc.FTR.dto.TeamDto;
-import com.unibuc.FTR.entity.PlayerTransfer;
-import com.unibuc.FTR.entity.Team;
-import com.unibuc.FTR.exception.DataAlreadyExistsException;
 import com.unibuc.FTR.exception.DataNotFoundException;
 import com.unibuc.FTR.mapper.PlayerTransferMapper;
-import com.unibuc.FTR.mapper.TeamMapper;
 import com.unibuc.FTR.repository.PlayerRepository;
 import com.unibuc.FTR.repository.PlayerTransferRepository;
 import com.unibuc.FTR.repository.TeamRepository;
 import com.unibuc.FTR.service.abstractions.PlayerTransfersService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 @Service

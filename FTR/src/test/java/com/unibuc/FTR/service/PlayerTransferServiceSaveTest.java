@@ -2,14 +2,10 @@ package com.unibuc.FTR.service;
 
 import com.unibuc.FTR.constants.Constants;
 import com.unibuc.FTR.dto.PlayerTransferDto;
-import com.unibuc.FTR.dto.TeamDto;
 import com.unibuc.FTR.entity.Player;
 import com.unibuc.FTR.entity.PlayerTransfer;
 import com.unibuc.FTR.entity.Team;
-import com.unibuc.FTR.exception.DataAlreadyExistsException;
 import com.unibuc.FTR.exception.DataNotFoundException;
-import com.unibuc.FTR.mapper.PlayerTransferMapper;
-import com.unibuc.FTR.mapper.TeamMapper;
 import com.unibuc.FTR.repository.PlayerRepository;
 import com.unibuc.FTR.repository.PlayerTransferRepository;
 import com.unibuc.FTR.repository.TeamRepository;
@@ -23,7 +19,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.dao.DataIntegrityViolationException;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
