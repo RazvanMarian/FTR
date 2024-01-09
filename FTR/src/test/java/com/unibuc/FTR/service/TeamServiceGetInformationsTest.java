@@ -7,7 +7,7 @@ import com.unibuc.FTR.entity.TeamRoster;
 import com.unibuc.FTR.repository.PlayerRepository;
 import com.unibuc.FTR.repository.TeamRepository;
 import com.unibuc.FTR.repository.TeamRosterRepository;
-import com.unibuc.FTR.service.implementations.TeamServiceImplementation;
+import com.unibuc.FTR.service.implementations.TeamServiceImpl;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -35,7 +35,7 @@ public class TeamServiceGetInformationsTest {
     @Mock
     private PlayerRepository playerRepository;
     @InjectMocks
-    private TeamServiceImplementation teamService;
+    private TeamServiceImpl teamService;
 
 
     @Test

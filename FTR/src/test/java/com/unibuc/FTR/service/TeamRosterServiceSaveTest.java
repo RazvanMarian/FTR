@@ -9,7 +9,7 @@ import com.unibuc.FTR.exception.DataNotFoundException;
 import com.unibuc.FTR.mapper.TeamRosterMapper;
 import com.unibuc.FTR.repository.TeamRepository;
 import com.unibuc.FTR.repository.TeamRosterRepository;
-import com.unibuc.FTR.service.implementations.TeamRosterServiceImplementation;
+import com.unibuc.FTR.service.implementations.TeamRosterServiceImpl;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -36,7 +36,7 @@ public class TeamRosterServiceSaveTest {
     private TeamRepository teamRepository;
 
     @InjectMocks
-    private TeamRosterServiceImplementation teamRosterService;
+    private TeamRosterServiceImpl teamRosterService;
 
     @Test
     @DisplayName("Create team roster - happy path")

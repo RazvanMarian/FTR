@@ -12,7 +12,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TeamRosterServiceImplementation implements TeamRosterService {
+public class TeamRosterServiceImpl implements TeamRosterService {
     @Autowired
     private TeamRosterRepository teamRosterRepository;
 

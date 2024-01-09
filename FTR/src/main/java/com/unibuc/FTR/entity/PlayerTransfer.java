@@ -15,7 +15,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "PlayerTransfers")
-public class PlayerTransfers {
+public class PlayerTransfer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

@@ -6,7 +6,7 @@ import com.unibuc.FTR.entity.TeamRoster;
 import com.unibuc.FTR.exception.DataNotFoundException;
 import com.unibuc.FTR.repository.PlayerRepository;
 import com.unibuc.FTR.repository.TeamRosterRepository;
-import com.unibuc.FTR.service.implementations.PlayerServiceImplementation;
+import com.unibuc.FTR.service.implementations.PlayerServiceImpl;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -34,7 +34,7 @@ public class PlayerServiceAddPlayerToRosterTest {
     private TeamRosterRepository teamRosterRepository;
 
     @InjectMocks
-    private PlayerServiceImplementation playerService;
+    private PlayerServiceImpl playerService;
 
     @Test
     @DisplayName("Add player to roster - happy path")

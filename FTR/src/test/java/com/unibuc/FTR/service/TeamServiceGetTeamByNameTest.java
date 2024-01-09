@@ -5,7 +5,7 @@ import com.unibuc.FTR.dto.TeamDto;
 import com.unibuc.FTR.entity.Team;
 import com.unibuc.FTR.exception.DataNotFoundException;
 import com.unibuc.FTR.repository.TeamRepository;
-import com.unibuc.FTR.service.implementations.TeamServiceImplementation;
+import com.unibuc.FTR.service.implementations.TeamServiceImpl;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -27,7 +27,7 @@ public class TeamServiceGetTeamByNameTest {
     private TeamRepository teamRepository;
 
     @InjectMocks
-    private TeamServiceImplementation teamService;
+    private TeamServiceImpl teamService;
 
     @Test
     @DisplayName("Get team by name - happy path")

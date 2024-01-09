@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FixtureServiceImplementation implements FixtureService {
+public class FixtureServiceImpl implements FixtureService {
     @Autowired
     private TeamRepository teamRepository;
 

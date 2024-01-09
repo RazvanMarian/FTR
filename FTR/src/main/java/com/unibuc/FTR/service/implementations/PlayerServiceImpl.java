@@ -14,7 +14,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 @Service
-public class PlayerServiceImplementation implements PlayerService {
+public class PlayerServiceImpl implements PlayerService {
     @Autowired
     private PlayerRepository playerRepository;
 

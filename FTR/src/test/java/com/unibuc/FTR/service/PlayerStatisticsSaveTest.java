@@ -8,7 +8,7 @@ import com.unibuc.FTR.exception.DataNotFoundException;
 import com.unibuc.FTR.mapper.PlayerStatisticsMapper;
 import com.unibuc.FTR.repository.PlayerRepository;
 import com.unibuc.FTR.repository.PlayerStatisticsRepository;
-import com.unibuc.FTR.service.implementations.PlayerStatisticsServiceImplementation;
+import com.unibuc.FTR.service.implementations.PlayerStatisticsServiceImpl;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -38,7 +38,7 @@ public class PlayerStatisticsSaveTest {
     private PlayerRepository playerRepository;
 
     @InjectMocks
-    private PlayerStatisticsServiceImplementation playerStatisticsService;
+    private PlayerStatisticsServiceImpl playerStatisticsService;
 
     @Test
     @DisplayName("Save player statistics - happy path")

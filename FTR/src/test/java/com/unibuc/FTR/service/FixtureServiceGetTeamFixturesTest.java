@@ -6,7 +6,7 @@ import com.unibuc.FTR.entity.Team;
 import com.unibuc.FTR.exception.DataNotFoundException;
 import com.unibuc.FTR.repository.FixtureRepository;
 import com.unibuc.FTR.repository.TeamRepository;
-import com.unibuc.FTR.service.implementations.FixtureServiceImplementation;
+import com.unibuc.FTR.service.implementations.FixtureServiceImpl;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -37,7 +37,7 @@ public class FixtureServiceGetTeamFixturesTest {
     private TeamRepository teamRepository;
 
     @InjectMocks
-    private FixtureServiceImplementation fixtureService;
+    private FixtureServiceImpl fixtureService;
 
 
     @Test

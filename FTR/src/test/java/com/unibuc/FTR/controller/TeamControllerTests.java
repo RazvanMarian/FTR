@@ -3,7 +3,7 @@ package com.unibuc.FTR.controller;
 import com.unibuc.FTR.dto.PlayerDto;
 import com.unibuc.FTR.dto.TeamDto;
 import com.unibuc.FTR.dto.TeamInformationDto;
-import com.unibuc.FTR.service.implementations.TeamServiceImplementation;
+import com.unibuc.FTR.service.implementations.TeamServiceImpl;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -26,7 +26,7 @@ import static org.mockito.Mockito.when;
 public class TeamControllerTests {
 
     @Mock
-    private TeamServiceImplementation teamService;
+    private TeamServiceImpl teamService;
 
     @InjectMocks
     private TeamController teamController;

@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
-public class TeamServiceImplementation implements TeamService {
+public class TeamServiceImpl implements TeamService {
 
     @Autowired
     private TeamRepository teamRepository;

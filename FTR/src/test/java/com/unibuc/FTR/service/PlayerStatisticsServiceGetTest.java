@@ -4,9 +4,8 @@ import com.unibuc.FTR.constants.Constants;
 import com.unibuc.FTR.entity.Player;
 import com.unibuc.FTR.entity.PlayerStatistics;
 import com.unibuc.FTR.exception.DataNotFoundException;
-import com.unibuc.FTR.repository.PlayerRepository;
 import com.unibuc.FTR.repository.PlayerStatisticsRepository;
-import com.unibuc.FTR.service.implementations.PlayerStatisticsServiceImplementation;
+import com.unibuc.FTR.service.implementations.PlayerStatisticsServiceImpl;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -29,11 +28,8 @@ public class PlayerStatisticsServiceGetTest {
     @Mock
     private PlayerStatisticsRepository playerStatisticsRepository;
 
-    @Mock
-    private PlayerRepository playerRepository;
-
     @InjectMocks
-    private PlayerStatisticsServiceImplementation playerStatisticsService;
+    private PlayerStatisticsServiceImpl playerStatisticsService;
 
     @Test
     @DisplayName("Get player statistics - happy path")
@@ -55,9 +51,6 @@ public class PlayerStatisticsServiceGetTest {
     @DisplayName("Get player statistics - unhappy path player doesn't exist")
     public void GetPlayerStatisticsFails()
     {
-        Player player = new Player(1, "test", "test",new Date(),"defender", null, new HashSet<>());
-        PlayerStatistics playerStatistics = new PlayerStatistics(1, 10, 5,"2023/2024", player);
-
         when(playerStatisticsRepository.getPlayerStatisticsBySeason(2, "2023/2024")).thenReturn(null);
 
         assertThatThrownBy(() -> playerStatisticsService.getPlayerStatistics(2, "2023/2024"))
